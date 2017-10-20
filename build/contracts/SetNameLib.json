@@ -1,0 +1,196 @@
+{
+  "contract_name": "SetNameLib",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "self",
+          "type": "SetNameLib.Data storage"
+        },
+        {
+          "name": "key",
+          "type": "bytes32"
+        },
+        {
+          "name": "value",
+          "type": "bool"
+        }
+      ],
+      "name": "insert",
+      "outputs": [
+        {
+          "name": "replaced",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "self",
+          "type": "SetNameLib.Data storage"
+        },
+        {
+          "name": "keyIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "iterate_next",
+      "outputs": [
+        {
+          "name": "r_keyIndex",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "self",
+          "type": "SetNameLib.Data storage"
+        }
+      ],
+      "name": "iterate_start",
+      "outputs": [
+        {
+          "name": "keyIndex",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "self",
+          "type": "SetNameLib.Data storage"
+        },
+        {
+          "name": "key",
+          "type": "bytes32"
+        }
+      ],
+      "name": "get_index",
+      "outputs": [
+        {
+          "name": "keyIndex",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "self",
+          "type": "SetNameLib.Data storage"
+        },
+        {
+          "name": "keyIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "iterate_valid",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "self",
+          "type": "SetNameLib.Data storage"
+        },
+        {
+          "name": "keyIndex",
+          "type": "uint256"
+        }
+      ],
+      "name": "iterate_get",
+      "outputs": [
+        {
+          "name": "key",
+          "type": "bytes32"
+        },
+        {
+          "name": "value",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "self",
+          "type": "SetNameLib.Data storage"
+        },
+        {
+          "name": "key",
+          "type": "bytes32"
+        }
+      ],
+      "name": "contains",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "self",
+          "type": "SetNameLib.Data storage"
+        },
+        {
+          "name": "key",
+          "type": "bytes32"
+        }
+      ],
+      "name": "remove",
+      "outputs": [
+        {
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    }
+  ],
+  "unlinked_binary": "0x6060604052341561000f57600080fd5b5b6104418061001f6000396000f3006060604052361561008b5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416632dd8d3578114610090578063316c801c146100b75780633da2a5ab146100d75780637b672186146100f4578063844890e414610114578063ccf8f28214610136578063d282b1d41461015e578063d9759a0f14610180575b600080fd5b6100a360043560243560443515156101a2565b604051901515815260200160405180910390f35b6100c560043560243561023d565b60405190815260200160405180910390f35b6100c5600435610294565b60405190815260200160405180910390f35b6100c56004356024356102aa565b60405190815260200160405180910390f35b6100a36004356024356102c0565b604051901515815260200160405180910390f35b6101446004356024356102ce565b604051918252151560208201526040908101905180910390f35b6100a3600435602435610317565b604051901515815260200160405180910390f35b6100a360043560243561032e565b604051901515815260200160405180910390f35b600082815260208490526040812080546001909101805460ff1916841515179055818111156101d45760019150610234565b60018086018054916101e8919083016103b6565b600085815260208790526040902060018083019091558601805491925085918390811061021157fe5b906000526020600020906002020160005b50556002850180546001019055600091505b5b509392505050565b60010160005b60018301548210801561027b57506001830180548390811061026157fe5b906000526020600020906002020160005b506001015460ff165b1561028b57600190910190610243565b50805b92915050565b60006102a28260001961023d565b90505b919050565b6000818152602083905260409020545b92915050565b600182015481105b92915050565b60008083600101838154811015156102e257fe5b906000526020600020906002020160005b505460008181526020869052604090206001015490925060ff1690505b9250929050565b600081815260208390526040812054115b92915050565b60008181526020839052604081205480151561034d57600091506103af565b60008381526020859052604081209081556001908101805460ff191690558085018054600019840190811061037e57fe5b906000526020600020906002020160005b50600101805460ff19169115159190911790556002840180546000190190555b5092915050565b8154818355818115116103e2576002028160020283600052602060002091820191016103e291906103e8565b5b505050565b61041291905b8082111561040e576000815560018101805460ff191690556002016103ee565b5090565b905600a165627a7a7230582019e69b2f0982e7ebe6e0aa7abc3069b62da2ba870f9f1ee8ed61ed927166bcde0029",
+  "networks": {
+    "3": {
+      "events": {},
+      "links": {},
+      "address": "0xf064e2076d3c3ece1c2a2d2e3bc2bb342c42da2a",
+      "updated_at": 1508430833183
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1508466105521
+}
